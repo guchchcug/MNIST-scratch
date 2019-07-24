@@ -49,7 +49,7 @@ v_dL_dWh1 = np.zeros(Wh1.shape)
 v_dL_dWh2 = np.zeros(Wh2.shape)
 
 for i in range(iteration):
-    idx = random.randint(1, N_train)
+    idx = random.randint(0, N_train-1)
     x = np.reshape(x_train[idx], [-1, 1])  # (785, 1)
     y = np.reshape(y_train[idx], [-1, 1])  # (785, 1)
     # forward pass the batch to the first hidden layer
